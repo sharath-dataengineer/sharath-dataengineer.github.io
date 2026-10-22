@@ -75,8 +75,9 @@ nav .links a:hover { color: var(--fg); }
   background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 32px 32px; -webkit-mask-image: linear-gradient(#000 40%, transparent); mask-image: linear-gradient(#000 40%, transparent); }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 40px; align-items: center; }
-.eyebrow { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--signal); margin: 0 0 20px; display: flex; flex-wrap: wrap; gap: 4px 14px; }
-.eyebrow span + span::before { content: "/"; color: var(--line); margin-right: 14px; }
+.eyebrow { font: 500 12px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--signal); margin: 0 0 20px; display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.eyebrow span { display: inline-flex; align-items: center; gap: 8px; }
+.eyebrow span::before { content: ""; width: 6px; height: 6px; background: var(--accent); flex: none; }
 h1 { font: 800 clamp(42px, 6.4vw, 78px)/.98 var(--display); letter-spacing: -.03em; margin: 0 0 24px; text-wrap: balance; }
 h1 em { font-style: normal; color: var(--accent); }
 .lede { font-size: 19px; line-height: 1.6; color: var(--muted); max-width: 54ch; margin: 0 0 30px; }

@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: blueprint-style page. A pipeline diagram opens the page, then outcome-led case studies. Dark is the native theme; light is a paper-blueprint variant. */
+/* Layout: blueprint-style page. A pipeline diagram opens the page, then outcome-led case studies. Dark theme only. */
 :root {
   --bg: #0a1a21;
   --bg-2: #0e232c;
@@ -31,18 +31,6 @@
   --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
   color-scheme: dark;
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: #f5f7f8; --bg-2: #eaeff1; --surface: #ffffff; --fg: #0f2029; --muted: #51636d;
-    --line: #cbd6db; --accent: #0a6a85; --accent-ink: #ffffff; --signal: #b8530a; --good: #1d7a3e;
-    --grid: rgba(10, 106, 133, .07); color-scheme: light;
-  }
-}
-:root[data-theme="light"] {
-  --bg: #f5f7f8; --bg-2: #eaeff1; --surface: #ffffff; --fg: #0f2029; --muted: #51636d;
-  --line: #cbd6db; --accent: #0a6a85; --accent-ink: #ffffff; --signal: #b8530a; --good: #1d7a3e;
-  --grid: rgba(10, 106, 133, .07); color-scheme: light;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
@@ -66,8 +54,6 @@ nav .id i { color: var(--accent); font-style: normal; }
 nav .links { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 20px; }
 nav .links a { color: var(--muted); text-decoration: none; }
 nav .links a:hover { color: var(--fg); }
-#theme { font: inherit; background: none; color: var(--muted); border: 1px solid var(--line); padding: 2px 10px; cursor: pointer; }
-#theme:hover { color: var(--fg); border-color: var(--muted); }
 
 /* hero */
 .hero { position: relative; padding: 72px 0 56px; }
@@ -202,7 +188,6 @@ footer { padding: 0 0 40px; font: 12px var(--mono); color: var(--muted); display
     <a class="id" href="#top">sharath<i>.</i>rama</a>
     <div class="links">
       <a href="#work">Work</a><a href="#leadership">Leadership</a><a href="#writing">Writing</a><a href="#stack">Stack</a><a href="#career">Career</a><a href="#contact">Contact</a>
-      <button id="theme" type="button" aria-label="Toggle light and dark theme">theme</button>
     </div>
   </nav>
 </header>
@@ -216,8 +201,8 @@ footer { padding: 0 0 40px; font: 12px var(--mono); color: var(--muted); display
         <p class="lede">I design the systems around the pipelines: <b>standards other teams adopt</b>, <b>quality gates that block bad data</b>, and <b>AI agents that find and explain failures</b> so engineers stop triaging logs by hand.</p>
         <div class="cta">
           <a class="btn primary" href="#work">See the work</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/sharathde" rel="noopener">LinkedIn</a>
-          <a class="btn ghost" href="https://github.com/sharath-dataengineer" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/sharathde" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/sharath-dataengineer" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
 
@@ -338,12 +323,12 @@ footer { padding: 0 0 40px; font: 12px var(--mono); color: var(--muted); display
     <h2 id="h-writing">Everything I wish I had read earlier</h2>
     <p class="sub">Playbooks, reference architecture and tools, each in its own repository.</p>
     <div class="repos">
-      <a class="repo" href="https://github.com/sharath-dataengineer/data-engineering-playbook" rel="noopener"><b>data-engineering-playbook</b><span>63 chapters on Spark internals, Kafka, lakehouse design, modeling and FinOps.</span></a>
-      <a class="repo" href="https://github.com/sharath-dataengineer/data-platform-reference-architecture" rel="noopener"><b>data-platform-reference-architecture</b><span>Twelve platform patterns with trade-offs, failure modes and decision guides.</span></a>
-      <a class="repo" href="https://github.com/sharath-dataengineer/spark-performance-playbook" rel="noopener"><b>spark-performance-playbook</b><span>Shuffle, joins, AQE, memory and partition sizing, grounded in real workloads.</span></a>
-      <a class="repo" href="https://github.com/sharath-dataengineer/autonomous-data-platform" rel="noopener"><b>autonomous-data-platform</b><span>Self-healing platform design with drift detection and AI root cause.</span></a>
-      <a class="repo" href="https://github.com/sharath-dataengineer/iceberg-health-monitor" rel="noopener"><b>iceberg-health-monitor</b><span>CLI and REST tool that scores table health: small files, snapshots, manifests.</span></a>
-      <a class="repo" href="https://github.com/sharath-dataengineer/metadata-copilot" rel="noopener"><b>metadata-copilot</b><span>LLM assistant for lineage, ownership and schema-aware natural-language SQL.</span></a>
+      <a class="repo" href="https://github.com/sharath-dataengineer/data-engineering-playbook" target="_blank" rel="noopener noreferrer"><b>data-engineering-playbook</b><span>63 chapters on Spark internals, Kafka, lakehouse design, modeling and FinOps.</span></a>
+      <a class="repo" href="https://github.com/sharath-dataengineer/data-platform-reference-architecture" target="_blank" rel="noopener noreferrer"><b>data-platform-reference-architecture</b><span>Twelve platform patterns with trade-offs, failure modes and decision guides.</span></a>
+      <a class="repo" href="https://github.com/sharath-dataengineer/spark-performance-playbook" target="_blank" rel="noopener noreferrer"><b>spark-performance-playbook</b><span>Shuffle, joins, AQE, memory and partition sizing, grounded in real workloads.</span></a>
+      <a class="repo" href="https://github.com/sharath-dataengineer/autonomous-data-platform" target="_blank" rel="noopener noreferrer"><b>autonomous-data-platform</b><span>Self-healing platform design with drift detection and AI root cause.</span></a>
+      <a class="repo" href="https://github.com/sharath-dataengineer/iceberg-health-monitor" target="_blank" rel="noopener noreferrer"><b>iceberg-health-monitor</b><span>CLI and REST tool that scores table health: small files, snapshots, manifests.</span></a>
+      <a class="repo" href="https://github.com/sharath-dataengineer/metadata-copilot" target="_blank" rel="noopener noreferrer"><b>metadata-copilot</b><span>LLM assistant for lineage, ownership and schema-aware natural-language SQL.</span></a>
     </div>
   </section>
 
@@ -378,25 +363,12 @@ footer { padding: 0 0 40px; font: 12px var(--mono); color: var(--muted); display
     </div>
     <dl>
       <dt>Email</dt><dd><a href="mailto:sharathrama.de@gmail.com">sharathrama.de@gmail.com</a></dd>
-      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/sharathde" rel="noopener">linkedin.com/in/sharathde</a></dd>
-      <dt>GitHub</dt><dd><a href="https://github.com/sharath-dataengineer" rel="noopener">github.com/sharath-dataengineer</a></dd>
+      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/sharathde" target="_blank" rel="noopener noreferrer">linkedin.com/in/sharathde</a></dd>
+      <dt>GitHub</dt><dd><a href="https://github.com/sharath-dataengineer" target="_blank" rel="noopener noreferrer">github.com/sharath-dataengineer</a></dd>
     </dl>
   </div>
   <footer><span>&copy; 2026 Sharath Rama</span><span>Views are my own. Case studies are anonymized.</span></footer>
 </div>
 
-<script>
-(function () {
-  var root = document.documentElement, btn = document.getElementById('theme');
-  try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
-  btn.addEventListener('click', function () {
-    var cur = root.getAttribute('data-theme');
-    var dark = cur ? cur === 'dark' : !matchMedia('(prefers-color-scheme: light)').matches;
-    var next = dark ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch (e) {}
-  });
-})();
-</script>
 </body>
 </html>

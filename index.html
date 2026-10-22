@@ -167,8 +167,8 @@ footer { margin-top: 48px; padding-left: 36px; font: 400 12px var(--mono); color
   </section>
 
   <section id="work" aria-labelledby="h-work">
-    <h2 id="h-work">Production work</h2>
-    <p class="sub">Systems I built and ran, written up as anonymized case studies. Company and internal names are left out on purpose.</p>
+    <h2 id="h-work">Selected work</h2>
+    <p class="sub">Production systems written up as anonymized case studies, plus one open-source tool. Company and internal names are left out on purpose.</p>
     <div class="cases">
       <article class="case">
         <h3>Config-driven analytics foundation</h3>
@@ -177,10 +177,10 @@ footer { margin-top: 48px; padding-left: 36px; font: 400 12px var(--mono); color
         <ul class="tags"><li>Spark</li><li>EMR</li><li>HOCON config</li><li>SCD2</li><li>DQ gates</li></ul>
       </article>
       <article class="case">
-        <h3>Real-time Kafka pipelines at peak load</h3>
-        <p class="result">Sub-5-minute latency, 100+ stakeholders</p>
-        <p>Streaming pipelines sized for seasonal peaks of 5&ndash;8&times; average volume. Covers partition sizing, micro-batch tuning, exactly-once semantics through idempotent upserts, and inline quality checks that quarantine bad rows instead of crashing the stream.</p>
-        <ul class="tags"><li>Kafka</li><li>Structured Streaming</li><li>Idempotent upsert</li><li>Quarantine</li></ul>
+        <h3>Iceberg Health Monitor</h3>
+        <p class="result">A 0&ndash;100 health score for every Iceberg table</p>
+        <p>Iceberg tables degrade without any error. Small files, snapshot buildup, manifest growth, partition skew and stale partitions slow queries and raise cost long before anyone notices. This open-source tool scans table metadata, runs six analyzers, and recommends compaction, snapshot expiry or partition redesign. It ships as a CLI and a REST API.</p>
+        <ul class="tags"><li>Apache Iceberg</li><li>Python</li><li>CLI + REST</li><li>Compaction</li><li>Table health</li></ul>
       </article>
       <article class="case">
         <h3>Pipeline health monitor with AI advisory</h3>

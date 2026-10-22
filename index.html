@@ -27,10 +27,10 @@
 
 <div class="wrap" id="top">
   <div class="hero">
-    <div class="hero-grid">
+    <p class="eyebrow"><span>Staff Data Engineer</span><span>12+ years</span><span>Lakehouse &middot; Streaming &middot; AI for data</span></p>
+    <h1>Data platforms that <em>operate themselves.</em></h1>
+    <div class="hero-row">
       <div>
-        <p class="eyebrow"><span>Staff Data Engineer</span><span>12+ years</span><span>Lakehouse &middot; Streaming &middot; AI for data</span></p>
-        <h1>Data platforms that <em>operate themselves.</em></h1>
         <p class="lede">I design the systems around the pipelines: <b>standards other teams adopt</b>, <b>quality gates that block bad data</b>, and <b>AI agents that find and explain failures</b> so engineers stop triaging logs by hand.</p>
         <div class="cta">
           <a class="btn primary" href="#work">See the work</a>
@@ -38,7 +38,15 @@
           <a class="btn ghost" href="https://github.com/sharath-dataengineer" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
-
+      <aside class="status" aria-label="Availability">
+        <p class="status-head"><i class="pulse" aria-hidden="true"></i>Open to conversations</p>
+        <dl>
+          <dt>Looking for</dt><dd>Staff and Principal roles</dd>
+          <dt>Focus</dt><dd>Data platform, streaming, AI for data</dd>
+          <dt>Stack</dt><dd>Spark &middot; Kafka &middot; Delta Lake &middot; AWS</dd>
+        </dl>
+      </aside>
+    </div>
       <figure class="diagram">
         <svg viewBox="0 0 760 300" role="img" aria-label="Architecture: source systems feed a bronze, silver and gold lakehouse, then a blocking data quality gate, then dashboards, ML features and AI agents. An observability and AI layer spans the whole pipeline.">
           <g>
@@ -75,7 +83,6 @@
         </svg>
         <figcaption>Reference shape of the platforms I build. Illustrative, not a specific employer's system.</figcaption>
       </figure>
-    </div>
   </div>
 
   <div class="proof" aria-label="Impact highlights">
@@ -104,8 +111,8 @@
 
   <section id="focus" aria-labelledby="h-focus">
     <p class="kicker">What I do</p>
-    <h2 id="h-focus">Three things I'm good at</h2>
-    <p class="sub">Most data teams need all three. Few have someone who owns the whole chain from raw events to trusted answers.</p>
+    <h2 id="h-focus">Where I create leverage</h2>
+    <p class="sub">Most data teams need all three. Few have one person who owns the chain from raw events to trusted answers.</p>
     <div class="pillars">
       <div class="pillar"><span class="mono">01 / PLATFORM</span><h3>Lakehouse and batch at scale</h3><p>Medallion lakehouses on Spark and AWS, with CDC, SCD2 and config-driven pipelines. New tables are config, not code.</p></div>
       <div class="pillar"><span class="mono">02 / STREAMING</span><h3>Real-time you can rely on</h3><p>Kafka and Structured Streaming sized for seasonal peaks, with exactly-once upserts and quarantine for bad rows.</p></div>

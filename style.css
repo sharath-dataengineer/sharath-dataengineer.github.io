@@ -137,7 +137,7 @@ h2 { font: 700 clamp(30px, 4.4vw, 44px)/1.08 var(--display); letter-spacing: -.0
 .timeline span { color: var(--muted); font-size: 15.5px; }
 .timeline li:first-child .when { color: var(--signal); }
 
-.contact { margin-top: 88px; padding: 56px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 56px; align-items: end; }
+.contact { margin-top: 64px; padding: 48px 40px; border: 1px solid var(--line); background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, var(--surface)), var(--surface)); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 56px; align-items: end; }
 .contact h2 { margin-bottom: 12px; }
 .contact p { margin: 0; color: var(--muted); }
 .contact p.kicker { color: var(--signal); margin-bottom: 12px; }
@@ -204,3 +204,5 @@ body { overflow-x: clip; }
   .diagram svg { min-width: 620px; }
   .diagram figcaption { position: sticky; left: 0; }
 }
+@media (max-width: 520px) { .contact { padding: 32px 20px; margin-top: 48px; } }
+footer { margin-top: 28px; }

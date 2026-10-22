@@ -168,7 +168,7 @@ footer { margin-top: 48px; padding-left: 36px; font: 400 12px var(--mono); color
 
   <section id="work" aria-labelledby="h-work">
     <h2 id="h-work">Selected work</h2>
-    <p class="sub">Production systems written up as anonymized case studies, plus one open-source tool. Company and internal names are left out on purpose.</p>
+    <p class="sub">Anonymized production case studies and a reference architecture. Company and internal names are left out on purpose.</p>
     <div class="cases">
       <article class="case">
         <h3>Config-driven analytics foundation</h3>
@@ -183,10 +183,16 @@ footer { margin-top: 48px; padding-left: 36px; font: 400 12px var(--mono); color
         <ul class="tags"><li>Apache Iceberg</li><li>Python</li><li>CLI + REST</li><li>Compaction</li><li>Table health</li></ul>
       </article>
       <article class="case">
-        <h3>Pipeline health monitor with AI advisory</h3>
-        <p class="result">Failure risk predicted before the run fails</p>
-        <p>A SparkListener feeds stage metrics to a LightGBM risk model, a policy engine tiers the alerts, and an LLM writes a root-cause advisory for the serious ones. Manual log triage went away.</p>
-        <ul class="tags"><li>SparkListener</li><li>LightGBM</li><li>LLM RCA</li><li>Observability</li></ul>
+        <h3>Agentic AI reconciliation and validation</h3>
+        <p class="result">Cross-system reconciliation with an AI agent that explains the gaps</p>
+        <p>Two reporting systems disagreed on unit counts, and analysts spent days finding out why. I built a reconciliation layer that classifies roughly 16K mismatched units into 8 root-cause categories, then added an AI agent that runs the validation, explains each gap and proposes the fix. A partner team adopted the agent for their own validation work.</p>
+        <ul class="tags"><li>LLM agents</li><li>Reconciliation</li><li>Data validation</li><li>Spark SQL</li><li>Root-cause classification</li></ul>
+      </article>
+      <article class="case">
+        <h3>Autonomous data platform</h3>
+        <p class="result">Reference architecture for a platform that monitors and repairs itself</p>
+        <p>A design for a self-operating platform that extends the monitoring patterns I ran in production. It covers schema drift detection, AI-assisted root-cause analysis, cost attribution per pipeline and an LLM copilot for operators. Decisions are recorded as ADRs, and the monitoring core has working code.</p>
+        <ul class="tags"><li>Schema drift</li><li>AI root cause</li><li>FinOps</li><li>LLM copilot</li><li>ADRs</li></ul>
       </article>
     </div>
   </section>
